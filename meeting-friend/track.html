@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <title>Track</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ececec; padding:1rem;">
+      <div class="container-fluid">
+        <a class="navbar-brand px-3" href="#">
+          <h4 style="color: rgb(88, 88, 88)">Nice Meeting You</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mr-4 mt-2">
+            <li class="nav-item">
+              <a class="nav-link mr-2 px-3" href="./index.html" style="border-radius: 0.4rem;">
+                <h5>Home</h5>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./track.html" style="border-radius: 0.4rem;">
+                <h5>Track</h5>
+              </a>
+            </li>
+          </ul>
+          <!-- Search bar -->
+          <form class="d-flex" id="search-form">
+            <input class="form-control me-2 px-3 col" id="search-input" type="search" placeholder="Name ~"
+              aria-label="Search">
+            <button class="btn btn-outline-success col" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Card -->
+  <div class="container m-5">
+    <div class="row d-flex justify-content-start" id="data-panel">
+      <!-- Render User List -->
+      <!-- <div class="col-sm-auto">
+        <div class="card mb-5">
+          <div class="card-body">
+            <img src="https://randomuser.me/api/portraits/men/88.jpg" class="card-img mb-2" alt="avatar"
+              data-bs-toggle="modal" data-bs-target="#user-modal">
+            <p class="card-title">Guillaume Vincent</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-secondary btn-add-track">+</button>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- Paginator -->
+  <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center" id="paginator">
+      <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+    </ul>
+  </nav>
+
+  <!-- User Modal -->
+  <div class="modal fade" id="user-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 40rem;">
+        <div class="modal-header" style="background-color: #ececec; padding:1rem;">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0" id="user-modal-body">
+          <div class="row">
+            <div class="col-sm-5 ps-4 pt-3" id="user-modal-img">
+              <!-- img -->
+              <button type="button" class="btn my-2">
+                <h2 class="love-icon">♥</h2>
+              </button>
+            </div>
+            <div class="col-sm-7 ps-4 pt-3">
+              <h3 id="user-modal-name"></h3>
+              <div class="row my-2">
+                <p class="col" id="user-modal-gender"></p>
+              </div>
+              <div>
+                <p class="col" id="user-modal-age"></p>
+                <p id="user-modal-region"></p>
+                <p id="user-modal-birthday"></p>
+                <p id="user-modal-email"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="./track.js"></script>
+</body>
+
+</html>
